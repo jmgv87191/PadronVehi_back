@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const padron_1 = require("../controllers/padron");
+const router = (0, express_1.Router)();
+router.get('/', padron_1.getForms);
+router.get('/:id', padron_1.getForm);
+router.delete('/:id', padron_1.deleteForm);
+router.post('/', padron_1.postForm);
+router.put('/:id', padron_1.putForm);
+exports.default = router;
